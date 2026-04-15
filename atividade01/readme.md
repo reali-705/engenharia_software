@@ -22,7 +22,7 @@ O processo está estruturado nos seguintes pilares:
 ## 3. Diagrama de Processo (Visão Geral)
 
 ```mermaid
-graph LR
+graph TD
   %% --- Classes Personalizadas ---
   classDef atividade fill:#ef5350,stroke:#212121,stroke-width:2px,font-size:20px,font-weight:bold,color:#111111;
   classDef condicao fill:#ffeb3b,stroke:#f57f17,stroke-width:2px,font-size:16px,color:#111111;
