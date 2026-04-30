@@ -85,7 +85,7 @@ A tabela abaixo consolida a fundamentação técnica de como cada modelo origina
 
 A tabela abaixo ilustra o processo geral do ciclo de vida:
 <div align="center">
-  <img src="Ciclo_de_Vida.png" alt="Diagrama do Ciclo de Vida Híbrido" width="700px">
+  <img src="assets/Ciclo_de_Vida.png" alt="Diagrama do Ciclo de Vida Híbrido" width="700px">
   <p><em>Figura 1: Representação do Modelo de Ciclo de Vida Híbrido Proposto.</em></p>
 </div>
 

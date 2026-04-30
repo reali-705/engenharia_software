@@ -14,6 +14,8 @@ Este repositório contém resoluções de exercícios e projetos relacionados à
 
 ## Bloco de Atividades
 
-| Atividade | Descrição | Status | Pasta |
-| :-: | --- | :-: | :-: |
-| 01 | Diagram de Processos | ![Produção](https://img.shields.io/badge/Produção-1F8B4C?style=flat-square) | [atividade01/](./atividade01) |
+| Nº | Descrição | Status |
+| :-: | --- | :-: |
+| 01 | [Diagram de Processos](./atividade01) | ![Finalizada](https://img.shields.io/badge/Finalizada-1F8B4C?style=flat-square) |
+| 02 | [Modelo de Ciclo de Vida](./atividade02) | ![Finalizada](https://img.shields.io/badge/Finalizada-1F8B4C?style=flat-square) |
+| 03 | [Escopo de um Sistema](./atividade03) | ![Produção](https://img.shields.io/badge/Produção-yellow?style=flat-square) |
