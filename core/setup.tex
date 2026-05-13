@@ -31,6 +31,7 @@
 \titlespacing*{\subsection}{0pt}{8pt}{4pt}
 
 \usepackage{parskip}
+\usepackage{changepage}
 
 % --- Links e navegacao ---
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
@@ -80,3 +81,11 @@
 \newcommand{\bps}{\text{bps}}
 \newcommand{\kbps}{\text{Kbps}}
 \newcommand{\mbps}{\text{Mbps}}
+
+\newenvironment{entrevista}{
+    \begin{adjustwidth}{1.5cm}{1.5cm}
+        \small
+        \setlength{\parskip}{0.35cm}
+}{
+    \end{adjustwidth}
+}
