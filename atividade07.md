@@ -26,7 +26,7 @@ Este documento apresenta a justificativa das decisões de modelagem tomadas na c
 ## 2. Diagrama de Classes
 
 <div align="center">
-  <img src="uml_diagram.png" alt="Diagrama de Classes - Gerência de Contratos" width="700px">
+  <img src="assets/uml_diagram.png" alt="Diagrama de Classes - Gerência de Contratos" width="700px">
   <p><em>Figura 1: Diagrama de Classes UML do sistema Gerência de Contratos (2026/06/08).</em></p>
 </div>
 
@@ -70,8 +70,7 @@ Usar uma enumeração garante que nenhum valor inválido possa ser atribuído ao
 
 A classe `Documento` foi modelada para refletir as regras de negócio centrais do RF-02. Os dois atributos de validação — `extensao : String` e `tamanho : long` — correspondem diretamente às duas checagens obrigatórias descritas no fluxo principal:
 
-> *"O sistema intercepta o arquivo e valida se a extensão é .pdf ou .docx."*
-
+> *"O sistema intercepta o arquivo e valida se a extensão é .pdf ou .docx."*  
 > *"O sistema valida se o tamanho do arquivo é menor ou igual a 5MB."*
 
 Esses atributos não são apenas metadados descritivos: eles são a base sobre a qual o método `realizarUpload() : boolean` executa sua lógica de validação antes de persistir o arquivo, conforme o fluxo do RF-02 descreve em sequência. O método `realizarDownload() : File` e `assinarDigitalmente(usuario : Usuario) : boolean` foram incluídos por extensão natural do domínio de gestão documental, antecipando funcionalidades que o sistema precisará suportar.
@@ -88,8 +87,7 @@ A composição — e não uma simples associação — foi escolhida porque um `
 
 A decisão de criar uma hierarquia de generalização partiu da observação de que os três RFs definem atores com perfis e permissões distintos, mas que compartilham uma base comum de autenticação. O RF-01 e o RF-02 exigem explicitamente que seus respectivos atores estejam autenticados:
 
-> *"O gestor de contratos deve estar autenticado no sistema com um perfil que possua permissão de escrita para o módulo de contratos."*
-
+> *"O gestor de contratos deve estar autenticado no sistema com um perfil que possua permissão de escrita para o módulo de contratos."*  
 > *"O cliente deve estar autenticado no sistema com um perfil que possua permissão de escrita para realizar o upload de arquivos."*
 
 Em vez de duplicar o comportamento de autenticação em classes separadas, centralizamos o método `autenticar() : boolean` na superclasse `Usuario`, aplicando o princípio de herança para que `Gestor` e `Fiscal` herdem essa capacidade sem repetição.
